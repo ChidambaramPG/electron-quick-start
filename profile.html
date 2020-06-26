@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Inactivity Tracker</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body class="authentication-bg bg-transparent">
+        
+        <div class="account-pages my-5 rounded">
+            <div class='container mt-4'>
+                <div class>
+                  <div class>
+                    <div class='row'>
+                      <div class='col-md-10'></div>
+                      <div class='col-md-2' style='text-align:right;'>
+                        <button class='btn btn-warning' style='color:white;' id="minimizeToTrayBtn">X</button>
+                      </div>
+                    </div>
+                    <div class='row shadow p-4 mt-3' style="background-color: white;">
+                      <div class="col-md-6 p-5">
+                        <img
+                          id="user-image"
+                          src="./assets/images/users/john_doe.png"
+                          class="avatar-sm rounded-circle mr-2"
+                          height="80px"
+                        />
+                        <h6 class="h5 mb-0 mt-4">Hello <span id="user-name"></span>!</h6>
+                        <p class="text-muted mt-1 mb-4">Have a productive day.</p>
+                        <a href="#" class='text-danger text-center mb-2' id='logoutBtn'>Logout</a>
+                        <div  class="col-md-12 text-danger time-warning mt-4 p-4 border border-danger rounded-right" id="warningSection" style="text-align:Left;display:none;">
+                          WARNING!! 5 Minutes break time exceeded
+                        </div>
+                      </div>
+                      <div class='col-lg-6 d-none d-md-inline-block pr-2'>
+                        <div class>
+                          <div class='overlay'></div>
+                          <div class='auth-user-testimonial'>
+                            
+                            <div>
+                                <h6 class="mb-0 mt-4">Active Hours</h6>
+                                <p class="text-muted mt-1 mb-4">
+                                  Here you can see how many hours you have
+                                  worked. Make sure its more than
+                                  <span
+                                    style="color:#242424;font-weight:600;"
+                                  >8 Hours</span>
+                                  before punching out
+                                </p>
+                              </div>
+            
+                            <h6 class="mb-0 mt-4" style="font-size:50px;">
+                              <p style="font-size:10px;">Totat time</p>
+                              <span style="font-size:15px;" id="activeTimer"></span>
+                            </h6>
+            
+                            <h6 class="mb-0 mt-4" style="font-size:50px;">
+                              <p style="font-size:10px;">Break time</p>
+                              <span style="font-size:15px;" id="inActiveTimer"></span>
+                            </h6>
+                            
+                            <div class='col-md-12 mb-0 mt-4' style='text-align:center;margin-left:-10px;'>
+                              <button class='btn btn-danger btn-block' id="breakToggleButton" >Start Break</button>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="meetings-section">
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+        
+        <script src="assets/js/vendor.min.js"></script>
+        
+        <script src="assets/js/app.min.js"></script>
+
+        <script src="assets/js/main.js"></script>
+
+        <script src="./renderer.js"></script>
+        
+    </body>
+</html>

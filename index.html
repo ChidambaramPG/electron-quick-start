@@ -1,19 +1,98 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Inactivity Tracker</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="shortcut icon" href="assets/images/innovations_logo.ico">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body class="bg-transparent">
+        
+        <div class="account-pages p-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-body p-0">
+                                <div class="row">
+                                    <div class="col-md-6 p-5">
+                                        <div class="mx-auto mb-5">
+                                            <a href="index.html">
+                                                <img src="assets/images/innovations_logo.png" alt="" height="80" />
+                                                <!-- <h3 class="d-inline align-middle ml-1 text-logo">RexavLLP</h3> -->
+                                            </a>
+                                        </div>
+                                        <h6 class="h5 mb-0 mt-4">Welcome!</h6>
+                                        <p class="text-muted mt-1 mb-4">Enter your email address and password to
+                                            access admin panel.</p>
+                                        <form action="" class="authentication-form" id="loginForm">
+                                            <div class="form-group">
+                                                <label class="form-control-label">Email Address</label>
+                                                <div class="input-group input-group-merge">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="icon-dual" data-feather="mail"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="email" class="form-control" id="login-email" placeholder="johndoe@rexav.in">
+                                                </div>
+                                            </div>
+                                            <div class="form-group mt-4">
+                                                <label class="form-control-label">Password</label>
+                                                <div class="input-group input-group-merge">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="icon-dual" data-feather="lock"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="password" class="form-control" id="login-password"
+                                                        placeholder="Enter your password">
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-4">
+                                                <div class="custom-control custom-checkbox">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-0 text-center">
+                                                <button class="btn btn-primary btn-block" type="submit" id="loginBtn"> Log In
+                                                </button>
+                                            </div>
+                                        </form>
+                                        
+                                    </div>
+                                    <div class="col-lg-6 d-none d-md-inline-block rounded-right">
+                                        <div class="auth-page-sidebar">
+                                            <div class="overlay"></div>
+                                            <div class="auth-user-testimonial">
+                                                <p class="font-size-24 font-weight-bold text-white mb-1">Hello user!</p>
+                                                <p class="lead">"A productive day always makes you happy!"</p>
+                                                <p>-Admin :D </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div> 
+                        </div>
+                        
+                    </div> 
+                </div>
+                
+            </div>
+            <div id="change-page"></div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+        
+        <script src="assets/js/vendor.min.js"></script>
+        
+        <script src="assets/js/app.min.js"></script>
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
-  </body>
+        <script src="./renderer.js"></script>
+        
+    </body>
 </html>
